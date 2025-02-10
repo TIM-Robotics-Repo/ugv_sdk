@@ -85,7 +85,7 @@ void AsyncCAN::Close() {
   io_context_.stop();
   if (io_thread_.joinable()) io_thread_.join();
   io_context_.reset();
-  
+
   // release port fd
   const int close_result = ::close(can_fd_);
   can_fd_ = -1;
