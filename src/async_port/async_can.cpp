@@ -130,7 +130,7 @@ void AsyncCAN::SendFrame(const struct can_frame &frame) {
         if (error) {
           std::cerr << "Failed to send CAN frame" << std::endl;
         }
-        // std::cout << "frame sent" << std::endl;
+        std::cout << "frame sent" << std::endl;
       });
 }
 
